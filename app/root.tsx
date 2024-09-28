@@ -21,6 +21,7 @@ import {
 } from 'remix-themes'
 import { themeSessionResolver } from './sessions.server'
 
+import Header from '~/components/header.tsx'
 import stylesheet from '~/tailwind.css?url'
 
 export const links: LinksFunction = () => [
@@ -78,8 +79,18 @@ export function App() {
         />
         <Links />
       </head>
-      <body className="flex h-screen items-center justify-center">
-        <Outlet />
+      <body>
+        <div className="relative flex min-h-screen flex-col bg-background">
+          <Header />
+          <main className="flex-1">
+            <div className="container relative mx-auto py-8">
+              <Outlet />
+            </div>
+          </main>
+          <footer className="py-6 md:px-8 md:py-0">
+            TODO
+          </footer>
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
