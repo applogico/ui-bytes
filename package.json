@@ -57,6 +57,14 @@
     "node": ">=20.0.0"
   },
   "lint-staged": {
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
     "**/*": "prettier --write --ignore-unknown"
   }
 }
