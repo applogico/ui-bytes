@@ -2,12 +2,12 @@ import React from 'react'
 import { ModeToggle } from '~/components/mode-toggle'
 
 export default function Index() {
-	return (
-		<>
-			<h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-				Taxing Laughter: The Joke Tax Chronicles
-			</h1>
-			<ModeToggle />
-		</>
-	)
+  return (
+    <>
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+        Taxing Laughter: The Joke Tax Chronicles
+      </h1>
+      <ModeToggle />
+    </>
+  )
 }
