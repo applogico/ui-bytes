@@ -1,12 +1,18 @@
 import React from 'react'
 
-export default function Logo() {
+interface Props {
+  size?: number
+}
+
+export default function Logo({
+  size = 50,
+}: Props) {
   return (
     <a className="" href="/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="50"
-        height="50"
+        width={size}
+        height={size}
         viewBox="0 0 35 35"
         fill="none"
       >
