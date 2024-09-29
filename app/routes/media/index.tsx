@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default function Index() {
-  return <>Home page</>
+  return <>Videos page</>
 }
