@@ -11,7 +11,7 @@ export default function Index() {
       <h2 className="prose py-4 tracking-tight dark:prose-invert sm:py-8 sm:text-4xl">
         Recent posts
       </h2>
-      <section className="flex w-full flex-wrap gap-4">
+      <section className="flex flex-col gap-4">
         {posts.map(
           ({
             slug,

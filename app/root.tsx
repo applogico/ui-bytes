@@ -83,7 +83,7 @@ export function App() {
         <div className="relative flex min-h-screen flex-col bg-background">
           <Header />
           <main className="flex-1">
-            <div className="container relative mx-auto">
+            <div className="container relative mx-auto max-w-screen-lg">
               <Outlet />
             </div>
           </main>
