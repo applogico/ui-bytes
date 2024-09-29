@@ -2,14 +2,11 @@ import React from 'react'
 
 export default function Logo() {
   return (
-    <a
-      className="mr-4 mt-1 flex items-center space-x-2 lg:mr-6"
-      href="/"
-    >
+    <a className="" href="/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="70"
-        height="70"
+        width="50"
+        height="50"
         viewBox="0 0 35 35"
         fill="none"
       >
@@ -54,9 +51,6 @@ export default function Logo() {
           fill="#4D0783"
         />
       </svg>
-      <span className="hidden text-3xl font-bold lg:inline-block">
-        UI Bytes
-      </span>
     </a>
   )
 }
