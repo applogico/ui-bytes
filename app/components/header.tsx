@@ -26,7 +26,7 @@ export default function Header() {
                   asChild
                   className={Nav.navigationMenuTriggerStyle()}
                 >
-                  <NavLink to="/blog">
+                  <NavLink to="/blog._index">
                     Blog
                   </NavLink>
                 </Nav.NavigationMenuLink>

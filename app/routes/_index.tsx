@@ -41,7 +41,8 @@ export default function Index() {
                   {tags &&
                     tags.map((tag) => (
                       <NavLink
-                        to={`/posts?tag=${tag}`}
+                        key={tag}
+                        to={`/blog?tag=${tag}`}
                       >
                         <Badge>{tag}</Badge>
                       </NavLink>
@@ -49,7 +50,7 @@ export default function Index() {
                 </div>
                 <p>{preview}</p>
                 <Link
-                  to={`/posts/${slug}`}
+                  to={`/blog/${slug}`}
                   className="self-end"
                 >
                   <Button variant="outline">
