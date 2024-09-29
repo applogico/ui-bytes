@@ -1,14 +1,9 @@
-import { Link } from '@remix-run/react'
+import { NavLink } from '@remix-run/react'
 import React from 'react'
+
 import Logo from '~/components/logo.tsx'
 import { ModeToggle } from '~/components/mode-toggle.tsx'
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from '~/components/ui/navigation-menu.tsx'
+import * as Nav from '~/components/ui/navigation-menu.tsx'
 
 export default function Header() {
   return (
@@ -16,38 +11,38 @@ export default function Header() {
       <div className="container mx-auto flex max-w-screen-2xl items-center">
         <div className="mr-4 hidden w-full items-center justify-between md:flex">
           <Logo />
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <Link to="/">
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                  >
-                    Home
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link to="/blog">
-                  <NavigationMenuLink
-                    active
-                    className={navigationMenuTriggerStyle()}
-                  >
+          <Nav.NavigationMenu>
+            <Nav.NavigationMenuList>
+              <Nav.NavigationMenuItem>
+                <Nav.NavigationMenuLink
+                  asChild
+                  className={Nav.navigationMenuTriggerStyle()}
+                >
+                  <NavLink to="/">Home</NavLink>
+                </Nav.NavigationMenuLink>
+              </Nav.NavigationMenuItem>
+              <Nav.NavigationMenuItem>
+                <Nav.NavigationMenuLink
+                  asChild
+                  className={Nav.navigationMenuTriggerStyle()}
+                >
+                  <NavLink to="/blog">
                     Blog
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link to="/media">
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                  >
+                  </NavLink>
+                </Nav.NavigationMenuLink>
+              </Nav.NavigationMenuItem>
+              <Nav.NavigationMenuItem>
+                <Nav.NavigationMenuLink
+                  asChild
+                  className={Nav.navigationMenuTriggerStyle()}
+                >
+                  <NavLink to="/media">
                     Media
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+                  </NavLink>
+                </Nav.NavigationMenuLink>
+              </Nav.NavigationMenuItem>
+            </Nav.NavigationMenuList>
+          </Nav.NavigationMenu>
 
           <ModeToggle />
         </div>
