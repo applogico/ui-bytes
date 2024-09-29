@@ -3,7 +3,7 @@ import {
   useParams,
 } from '@remix-run/react'
 import React, { lazy, Suspense } from 'react'
-import Test from '../posts/test.mdx'
+
 export default function Post() {
   const { slug } = useParams()
   const Component = lazy(
@@ -14,7 +14,7 @@ export default function Post() {
     <Await resolve={Component}>
       <Suspense fallback="loading...">
         <div className="flex flex-col items-center pt-4">
-          <div className="prose dark:prose-invert">
+          <div className="prose px-2 dark:prose-invert">
             <Component />
           </div>
         </div>
@@ -23,5 +23,13 @@ export default function Post() {
   )
 }
 export function ErrorBoundary() {
-  return <h1>Unknown Error</h1>
+  return (
+    <div className="flex h-screen">
+      <div className="m-auto">
+        <h1 className="prose text-5xl font-bold">
+          BOOM!
+        </h1>
+      </div>
+    </div>
+  )
 }
