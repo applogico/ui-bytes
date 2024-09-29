@@ -1,7 +1,7 @@
 import type React from 'react'
 import Test, {
   attributes as testAttr,
-} from './test.mdx'
+} from './react-component-composition.mdx'
 
 interface Posts {
   published: number
