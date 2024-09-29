@@ -89,7 +89,7 @@ export function App() {
           </main>
           <footer className="flex justify-center p-4 py-6 md:px-8">
             <span className="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-              © 2024
+              © 2024{' '}
               <a
                 href="https://applogi.co"
                 className="hover:underline"
