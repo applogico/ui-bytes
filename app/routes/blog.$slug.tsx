@@ -13,7 +13,7 @@ export default function Post() {
   return (
     <Await resolve={Component}>
       <Suspense fallback="loading...">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center pt-4">
           <div className="prose dark:prose-invert">
             <Component />
           </div>
