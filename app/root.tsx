@@ -83,7 +83,7 @@ export function App() {
         <div className="relative flex min-h-screen flex-col bg-background">
           <Header />
           <main className="flex-1">
-            <div className="container relative mx-auto py-8">
+            <div className="container relative mx-auto">
               <Outlet />
             </div>
           </main>
