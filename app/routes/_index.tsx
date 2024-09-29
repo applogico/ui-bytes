@@ -31,7 +31,7 @@ export default function Index() {
             return (
               <article
                 key={slug}
-                className="justify-startdark:prose-invert prose flex flex-col p-2"
+                className="prose flex flex-col justify-start p-2 dark:prose-invert"
               >
                 <h3 className="mb-1">{title}</h3>
                 <div className="flex items-center gap-x-4 text-xs">
