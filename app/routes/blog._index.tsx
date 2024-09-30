@@ -1,15 +1,13 @@
+import { useSearchParams } from '@remix-run/react'
 import React from 'react'
-import { posts } from '~/posts'
+import PostLists from '~/components/posts-list.tsx'
 
 export default function Index() {
-  return posts.map(({ slug, title }) => {
-    return (
-      <article
-        key={slug}
-        className="prose dark:prose-invert lg:prose-xl"
-      >
-        <h1>{title}</h1>
-      </article>
-    )
-  })
+  const [searchParams] = useSearchParams()
+
+  return (
+    <PostLists
+      tag={searchParams.get('tag') ?? undefined}
+    />
+  )
 }
