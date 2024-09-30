@@ -1,5 +1,67 @@
+import { Link, NavLink } from '@remix-run/react'
+import { intlFormat } from 'date-fns'
 import React from 'react'
+import { Badge } from '~/components/ui/badge'
+import { Button } from '~/components/ui/button'
+import { posts } from '~/posts'
 
 export default function Index() {
-  return <>Home page</>
+  return (
+    <div className="mx-4">
+      <h2 className="prose py-4 tracking-tight dark:prose-invert sm:py-8 sm:text-4xl">
+        Recent posts
+      </h2>
+      <section className="flex flex-col gap-4">
+        {posts.map(
+          ({
+            slug,
+            title,
+            published,
+            preview,
+            tags,
+          }) => {
+            const publishedStr = intlFormat(
+              published,
+              {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              },
+            )
+            return (
+              <article
+                key={slug}
+                className="prose flex flex-col justify-start p-2 dark:prose-invert"
+              >
+                <h3 className="mb-1">{title}</h3>
+                <div className="flex items-center gap-x-4 text-xs">
+                  <time dateTime={publishedStr}>
+                    {publishedStr}
+                  </time>
+                  {tags &&
+                    tags.map((tag) => (
+                      <NavLink
+                        key={tag}
+                        to={`/blog?tag=${tag}`}
+                      >
+                        <Badge>{tag}</Badge>
+                      </NavLink>
+                    ))}
+                </div>
+                <p>{preview}</p>
+                <Link
+                  to={`/blog/${slug}`}
+                  className="self-end"
+                >
+                  <Button variant="outline">
+                    Read full post
+                  </Button>
+                </Link>
+              </article>
+            )
+          },
+        )}
+      </section>
+    </div>
+  )
 }

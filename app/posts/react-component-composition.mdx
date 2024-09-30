@@ -1,0 +1,178 @@
+export const attributes = {
+  title: 'React component composition',
+  slug: 'react-component-composition',
+  tags: [
+    'React.js',
+    'component design',
+    'React.js patterns',
+  ],
+  preview:
+    'React interactive components have the tendency to signfinicanlty grow in complexity over time, ' +
+    'bringing about increased congnitive load required to be able to maintain, extend, or even ' +
+    'understand them',
+  published: 1727648322760,
+}
+
+# Organizing React Code with Composition Patterns: A Practical Guide
+
+When working with React, organizing your component logic can quickly become overwhelming, especially as your project grows in complexity. One of the most effective strategies to manage this complexity is through **component composition**. In this post, we’ll dive into how you can use composition patterns to clean up your React code, make it more maintainable, and simplify collaboration with other developers.
+
+## The Challenge: Packed JSX and Complex Logic
+
+Let’s start by addressing a common issue in React projects: tightly packed JSX expressions. Imagine a scenario where your component is responsible for fetching data from a server and rendering a list of people. The component could look something like this:
+
+```javascript
+export function PeopleList() {
+  const { people } = useLoaderData();
+  const { state } = useNavigation();
+  return (<Card>
+    <CardHeader>
+      <CardTitle>People</CardTitle>
+    </CardHeader>
+    <CardContent>
+      {state === "loading" && <Spinner />} // Loading state
+      {people.results.length === 0 ? ( // Empty state
+        <NoPeopleFound />
+      ) : (
+        people.results.map((person) => (
+          // People list ready state
+          <span key={person.name}>{person.name}</span>;
+        ) ))}
+    </CardContent>
+  </Card>);
+}
+```
+
+At first glance, this component seems harmless. It gets the job done—fetching data and rendering the list. But it doesn't take much imagination to see how this pattern can spiral out of control. With more data states, conditional rendering, and more complex UI, the component can become difficult to read and even harder to maintain. As it grows, debugging will require more cognitive effort, and making changes can introduce bugs.
+
+## The Solution: Early Return Statements
+
+One of the simplest and most effective ways to refactor this is by using **early return statements**. Instead of jamming multiple conditions and JSX expressions inside the `return` statement, you can handle each state separately with a clear early return for each case:
+
+```javascript
+export function PeopleList() {
+  const { people } = useLoaderData()
+  const { state } = useNavigation()
+
+  if (state === 'loading') {
+    // Loading state
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle>People</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Spinner />
+        </CardContent>
+      </Card>
+    )
+  }
+
+  if (people.results.length === 0) {
+    // Empty state
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle>People</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <NoPeopleFound />
+        </CardContent>
+      </Card>
+    )
+  }
+
+  // People list ready state
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>People</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {people.results.map((person) => {
+          return (
+            <span key={person.name}>
+              {person.name}
+            </span>
+          )
+        })}
+      </CardContent>
+    </Card>
+  )
+}
+```
+
+This structure breaks the logic into manageable chunks, making the component much more readable. Each state—loading, error, or successful data fetch—is easy to follow because the logic for each state is isolated. With early returns, you’re essentially trimming down the code and reducing the cognitive load for yourself and others who may work on the project.
+
+## Extracting Reusable Components
+
+While early return statements clean up some of the complexity, there’s another step you can take to make your code even more organized: **component extraction**. Instead of having a long block of JSX that renders the list, you can extract it into a separate, reusable component.
+
+Here’s an example:
+
+```javascript
+function PeopleListWrapper({ children }) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>People</CardTitle>
+      </CardHeader>
+      <CardContent>{children}</CardContent>
+    </Card>
+  )
+}
+
+export function PeopleList() {
+  const { people } = useLoaderData()
+  const { state } = useNavigation()
+
+  if (state === 'loading') {
+    // Loading state
+    return (
+      <PeopleListWrapper>
+        <Spinner />
+      </PeopleListWrapper>
+    )
+  }
+
+  if (people.results.length === 0) {
+    // Empty state
+    return (
+      <PeopleListWrapper>
+        <NoPeopleFound />
+      </PeopleListWrapper>
+    )
+  }
+
+  return (
+    <PeopleListWrapper>
+      {people.results.map((person) => {
+        // People list ready state
+        return (
+          <span key={person.name}>
+            {person.name}
+          </span>
+        )
+      })}
+    </PeopleListWrapper>
+  )
+}
+```
+
+By moving the list rendering logic into its own component, you’re not only reducing repetition but also promoting reusability. This allows for better modularity and cleaner separation of concerns. Now, instead of one bloated component, you have a more streamlined one that delegates rendering logic to smaller, single-responsibility components.
+
+## Why Component Composition Matters
+
+This method of composing components offers several significant benefits:
+
+- **Reduced Cognitive Load**: By breaking down your logic into smaller, focused components, you make your code easier to understand. This can be particularly helpful when returning to a project after some time or when working in a team environment.
+
+- **Improved Reusability**: Extracted components can be reused in other parts of your application, promoting DRY (Don’t Repeat Yourself) principles and reducing code duplication.
+
+- **Enhanced Maintainability**: A well-structured component hierarchy makes it easier to make updates and changes without affecting unrelated parts of the code.
+
+- **Better Collaboration**: By keeping components small and focused, your team members will find it easier to jump in and contribute without needing to spend hours trying to understand the logic.
+
+## Wrapping Up
+
+Component composition in React is more than just a pattern—it’s a mindset. By embracing it, you can write cleaner, more maintainable code that’s easier for both you and your team to work with. Refactoring large, complex components into smaller, modular pieces not only simplifies development but also allows you to scale your application with confidence.

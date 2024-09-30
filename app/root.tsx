@@ -83,12 +83,21 @@ export function App() {
         <div className="relative flex min-h-screen flex-col bg-background">
           <Header />
           <main className="flex-1">
-            <div className="container relative mx-auto py-8">
+            <div className="container relative mx-auto max-w-screen-lg">
               <Outlet />
             </div>
           </main>
-          <footer className="py-6 md:px-8 md:py-0">
-            TODO
+          <footer className="flex justify-center p-4 py-6 md:px-8">
+            <span className="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+              © 2024{' '}
+              <a
+                href="https://applogi.co"
+                className="hover:underline"
+              >
+                Applogico LLC
+              </a>
+              . All Rights Reserved.
+            </span>
           </footer>
         </div>
         <ScrollRestoration />
