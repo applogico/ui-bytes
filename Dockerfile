@@ -18,7 +18,7 @@ ADD package.json pnpm-lock.yaml ./
 RUN pnpm prune --prod --ignore-scripts
 
 FROM base AS build
-ENV NODE_ENV production
+ENV NODE_ENV=production
 WORKDIR /ui-bytes
 
 COPY --from=deps /ui-bytes/node_modules /ui-bytes/node_modules
