@@ -14,9 +14,10 @@ jobs:
           fetch-depth: 0
 
       - name: Git config
+        token: ${{secrets.GH_TOKEN}}
         run: |
-          git config user.name "release-it"
-          git config user.email "release-it@ui-bytes.dev"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Set node
         uses: actions/setup-node@v4
@@ -31,9 +32,6 @@ jobs:
             - args: [--frozen-lockfile]
 
       - name: Release
-
         run:
           if pnpm run should-semantic-release ;
           then pnpm release-it --verbose --ci ; fi
-        env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
