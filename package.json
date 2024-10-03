@@ -57,6 +57,8 @@
     "postcss": "^8.4.47",
     "prettier": "3.3.3",
     "rehype-pretty-code": "^0.14.0",
+    "release-it": "^17.6.0",
+    "release-it-pnpm": "^4.6.3",
     "remark-frontmatter": "^5.0.0",
     "remark-mdx-frontmatter": "^5.0.0",
     "stylelint": "16.9.0",
