@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.0.7
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Trying something else since this is the only way
+  I know how to test gha &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(41cf6)</samp>](https://github.com/applogico/ui-bytes/commit/41cf6cb)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.6...0.0.7)
+
 ## 0.0.6
 
 ### &nbsp;&nbsp;&nbsp;Features
