@@ -14,7 +14,8 @@ jobs:
           fetch-depth: 0
 
       - name: Git config
-        token: ${{secrets.GH_TOKEN}}
+        with:
+          token: ${{secrets.GH_TOKEN}}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
