@@ -1,0 +1,45 @@
+services:
+  reverse-proxy:
+    image: traefik:v3.1
+    command:
+      - '--providers.docker'
+      - '--providers.docker.exposedbydefault=false'
+      - '--entryPoints.websecure.address=:443'
+      - '--certificatesresolvers.myresolver.acme.tlschallenge=true'
+      - '--certificatesresolvers.myresolver.acme.email=admin@applogi.co'
+      - '--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json'
+      - '--entrypoints.web.address=:80'
+      - '--entrypoints.web.http.redirections.entrypoint.to=websecure'
+      - '--entrypoints.web.http.redirections.entrypoint.scheme=https'
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - letsencrypt:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock
+  ui-bytes:
+    image: ghcr.io/applogico/ui-bytes:prod
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.ui-bytes.rule=Host(`zenful.cloud`)'
+      - 'traefik.http.routers.ui-bytes.entrypoints=websecure'
+      - 'traefik.http.routers.ui-bytes.tls.certresolver=myresolver'
+      - 'com.centurylinklabs.watchtower.enable=true'
+    secrets:
+      - db-password
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=ui-bytes
+      - POSTGRES_PORT=5432
+      - POSTGRES_SSLMODE=disable
+    deploy:
+      mode: replicated
+      replicas: 3
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  letsencrypt:
