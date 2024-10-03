@@ -33,6 +33,8 @@ jobs:
             - args: [--frozen-lockfile]
 
       - name: Release
-        run: npx release-it --verbose
+        run:
+          if pnpm run should-semantic-release ;
+          then pnpm release-it --verbose ; fi
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
