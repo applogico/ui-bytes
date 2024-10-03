@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.4
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Use release trigger &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(2deee)</samp>](https://github.com/applogico/ui-bytes/commit/2deee68)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.3...0.0.4)
+
 ## 0.0.3
 
 ### &nbsp;&nbsp;&nbsp;Features
