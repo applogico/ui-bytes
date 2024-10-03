@@ -1,5 +1,6 @@
 {
   "name": "ui-bytes",
+  "version": "0.0.1",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -46,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "^10.4.20",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
