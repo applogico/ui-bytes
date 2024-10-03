@@ -1,0 +1,53 @@
+name: Deploy
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - '*'
+
+env:
+  REGISTRY: ghcr.io
+  ORG: applogico
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Log in to the GHCR
+        uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name:
+          Extract metadata (tags, labels) for
+          Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images:
+            ${{ env.REGISTRY }}/${{ env.ORG
+            }}/ui-bytes:${{github.ref_name}}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from:
+            type=registry,ref=${{ env.REGISTRY
+            }}/${{ env.ORG }}/ui-bytes:buildcache
+          cache-to:
+            type=registry,ref=${{ env.REGISTRY
+            }}/${{ env.ORG
+            }}/ui-bytes:buildcache,mode=max
