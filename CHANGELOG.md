@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.0.3
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Add deploy workflow &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(2ceca)</samp>](https://github.com/applogico/ui-bytes/commit/2ceca72)
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Missing permissions &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(bf3a2)</samp>](https://github.com/applogico/ui-bytes/commit/bf3a2e0)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.2...0.0.3)
+
 ## 0.0.2
 
 ### &nbsp;&nbsp;&nbsp;Features
