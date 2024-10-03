@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.9
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Ignore changelog pushes &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(5824f)</samp>](https://github.com/applogico/ui-bytes/commit/5824f1a)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.8...0.0.9)
+
 ## 0.0.8
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
