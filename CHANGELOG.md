@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.10
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Ignore package log changes &nbsp;-&nbsp; by
+  **Jaime Liz**
+  [<samp>(9efd7)</samp>](https://github.com/applogico/ui-bytes/commit/9efd7cc)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.9...0.0.10)
+
 ## 0.0.9
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
