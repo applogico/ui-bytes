@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.6
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Add a description to readme &nbsp;-&nbsp; by
+  **Jaime Liz**
+  [<samp>(6f0a1)</samp>](https://github.com/applogico/ui-bytes/commit/6f0a1af)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.5...0.0.6)
+
 ## 0.0.5
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
