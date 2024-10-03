@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.5
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Back to tag push &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(0b4e2)</samp>](https://github.com/applogico/ui-bytes/commit/0b4e285)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.4...0.0.5)
+
 ## 0.0.4
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
