@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.0.8
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Use a personal access token &nbsp;-&nbsp; by
+  **Jaime Liz**
+  [<samp>(27a35)</samp>](https://github.com/applogico/ui-bytes/commit/27a35be)
+- Try different name email &nbsp;-&nbsp; by
+  **Jaime Liz**
+  [<samp>(ae461)</samp>](https://github.com/applogico/ui-bytes/commit/ae4614f)
+- Try token prop &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(de9f2)</samp>](https://github.com/applogico/ui-bytes/commit/de9f2eb)
+- Token prop location &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(d93bb)</samp>](https://github.com/applogico/ui-bytes/commit/d93bb87)
+- This is getting old &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(3d494)</samp>](https://github.com/applogico/ui-bytes/commit/3d494f1)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.7...0.0.8)
+
 ## 0.0.7
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
