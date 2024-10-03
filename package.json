@@ -65,6 +65,7 @@
     "release-it-pnpm": "^4.6.3",
     "remark-frontmatter": "^5.0.0",
     "remark-mdx-frontmatter": "^5.0.0",
+    "should-semantic-release": "^0.3.0",
     "stylelint": "16.9.0",
     "stylelint-config-prettier": "9.0.5",
     "stylelint-config-standard": "36.0.1",
