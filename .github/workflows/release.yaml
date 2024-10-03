@@ -1,9 +1,5 @@
 name: Release
 
-permissions:
-  contents: write
-  id-token: write
-
 on:
   workflow_dispatch:
   push:
@@ -39,4 +35,4 @@ jobs:
           if pnpm run should-semantic-release ;
           then pnpm release-it --verbose --ci ; fi
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
