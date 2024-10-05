@@ -21,7 +21,7 @@ services:
     image: ghcr.io/applogico/ui-bytes:latest
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.ui-bytes.rule=Host(`zenful.cloud`)'
+      - 'traefik.http.routers.ui-bytes.rule=Host(`uibytes.dev`)'
       - 'traefik.http.routers.ui-bytes.entrypoints=websecure'
       - 'traefik.http.routers.ui-bytes.tls.certresolver=myresolver'
       - 'com.centurylinklabs.watchtower.enable=true'
