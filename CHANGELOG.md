@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.19
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Add watchtower &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(df4ed)</samp>](https://github.com/applogico/ui-bytes/commit/df4edda)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.18...0.0.19)
+
 ## 0.0.18
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
