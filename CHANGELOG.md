@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.0.11
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Use caching &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(82e23)</samp>](https://github.com/applogico/ui-bytes/commit/82e2344)
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Multiple pnpm versions &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(e6e3d)</samp>](https://github.com/applogico/ui-bytes/commit/e6e3d51)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.10...0.0.11)
+
 ## 0.0.10
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
