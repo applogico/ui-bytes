@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.14
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Add docker buildx &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(d5191)</samp>](https://github.com/applogico/ui-bytes/commit/d5191fb)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.13...0.0.14)
+
 ## 0.0.13
 
 ### &nbsp;&nbsp;&nbsp;Features
