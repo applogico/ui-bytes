@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.16
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Postgres stuff shouldn't be there &nbsp;-&nbsp;
+  by **Jaime Liz**
+  [<samp>(4eee2)</samp>](https://github.com/applogico/ui-bytes/commit/4eee2dc)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.15...0.0.16)
+
 ## 0.0.15
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
