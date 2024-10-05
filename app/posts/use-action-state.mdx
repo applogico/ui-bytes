@@ -3,9 +3,10 @@ export const attributes = {
   slug: 'use-action-state',
   tags: ['React', 'React 19', 'component design'],
   preview:
-    'React 19 offers a myriad of new convenient features aimed at simplifying and enhancing the code ' +
-    'we write, useActionState hook is one of those new features. Read this post for a quick overview ' +
-    'on its functionality.',
+    'React 19 is on the horizon, and with it comes a powerful new hook—useActionState. In this ' +
+    'post, I’ll show you how this hook can streamline your component logic by simplifying error ' +
+    'handling and pending states in async actions. Say goodbye to extra state management and hello ' +
+    'to cleaner, more efficient code.',
   published: 1727648322760,
 }
 
@@ -13,9 +14,9 @@ export const attributes = {
 
 Are you ready to hit the ground running when React 19 is officially released?
 
-There are a ton of new features coming in the next major release of React:
+There’s a ton of exciting new features coming in the next major React release.
 
-The new hook useActionState now simplifies the way we handle errors and pending states in react actions, you can use it instead of useTransition to simplify your form actions.
+One of the standout additions is the new useActionState hook, which simplifies how we handle errors and pending states in React actions. You can now use it instead of useTransition to streamline form actions.
 
 ```jsx
 function UpdateProfile({ profile }) {
@@ -47,12 +48,10 @@ function UpdateProfile({ profile }) {
 }
 ```
 
-Here the useActionState receives the action async function which will be responsible for submitting the form data and updating error state by returning a non-null value if necessary.
+In this example, useActionState takes an async action function that handles form submission. It updates the error state by returning a non-null value when necessary.
 
-As well as providing a transition to perform in case everything goes according to plan, in this case we redirect the user to the success page.
+The function body is also a perfect place to handle state updates or side effects when the action completes successfully—like redirecting the user to a success page, as shown here.
 
-Pay attention to the form element and its children, everything we need to cleanly render this component is provided by one hook and there are no need to create and maintain other state values.
+Notice how the form and its children are cleanly rendered. Thanks to useActionState, we no longer need to create or maintain additional state values.
 
-This simple and powerful new hook will further help us simplify component state that relies on async actions.
-
-Like, and subscribe for more UI Bytes!
+This simple yet powerful hook makes managing component state dependent on async actions even easier.
