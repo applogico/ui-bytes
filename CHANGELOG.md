@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.17
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Missing port &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(2501d)</samp>](https://github.com/applogico/ui-bytes/commit/2501d97)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.16...0.0.17)
+
 ## 0.0.16
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
