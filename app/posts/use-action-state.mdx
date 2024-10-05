@@ -1,0 +1,58 @@
+export const attributes = {
+  title: 'useActionState hook',
+  slug: 'use-action-state',
+  tags: ['React', 'React 19', 'component design'],
+  preview:
+    'React 19 offers a myriad of new convenient features aimed at simplifying and enhancing the code ' +
+    'we write, useActionState hook is one of those new features. Read this post for a quick overview ' +
+    'on its functionality.',
+  published: 1727648322760,
+}
+
+# useActionState hook
+
+Are you ready to hit the ground running when React 19 is officially released?
+
+There are a ton of new features coming in the next major release of React:
+
+The new hook useActionState now simplifies the way we handle errors and pending states in react actions, you can use it instead of useTransition to simplify your form actions.
+
+```jsx
+function UpdateProfile({ profile }) {
+  const [error, submit, isPending] =
+    useActionState(
+      async (prevState, data) => {
+        const err = await apiCall(data)
+        if (err) {
+          return err
+        }
+        redirect('/success')
+        return null
+      },
+      null, // Initial state (error)
+    )
+
+  return (
+    <form action={submit}>
+      <input type="text" name="name" />
+      <input type="text" name="email" />
+
+      <button type="submit" disabled={isPending}>
+        Update
+      </button>
+
+      {error && <p>{error}</p>}
+    </form>
+  )
+}
+```
+
+Here the useActionState receives the action async function which will be responsible for submitting the form data and updating error state by returning a non-null value if necessary.
+
+As well as providing a transition to perform in case everything goes according to plan, in this case we redirect the user to the success page.
+
+Pay attention to the form element and its children, everything we need to cleanly render this component is provided by one hook and there are no need to create and maintain other state values.
+
+This simple and powerful new hook will further help us simplify component state that relies on async actions.
+
+Like, and subscribe for more UI Bytes!
