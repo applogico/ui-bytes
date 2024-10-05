@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.18
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Domain &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(e3150)</samp>](https://github.com/applogico/ui-bytes/commit/e31501b)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.17...0.0.18)
+
 ## 0.0.17
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
