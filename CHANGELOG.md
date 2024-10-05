@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.15
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Docker registry login &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(09993)</samp>](https://github.com/applogico/ui-bytes/commit/09993bd)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.14...0.0.15)
+
 ## 0.0.14
 
 ### &nbsp;&nbsp;&nbsp;Features
