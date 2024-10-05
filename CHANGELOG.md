@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.20
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Missing credentials &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(42172)</samp>](https://github.com/applogico/ui-bytes/commit/42172a2)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.19...0.0.20)
+
 ## 0.0.19
 
 ### &nbsp;&nbsp;&nbsp;Features
