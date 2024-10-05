@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.13
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Simplify deployment &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(5e08c)</samp>](https://github.com/applogico/ui-bytes/commit/5e08cb8)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.12...0.0.13)
+
 ## 0.0.12
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
