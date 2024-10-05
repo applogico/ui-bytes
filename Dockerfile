@@ -34,4 +34,7 @@ COPY --from=build /ui-bytes/build /ui-bytes/build
 COPY --from=build /ui-bytes/public /ui-bytes/public
 ADD . .
 
+# Expose the port that the application listens on.
+EXPOSE 3000
+
 CMD ["npm", "start"]
