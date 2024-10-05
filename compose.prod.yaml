@@ -18,28 +18,17 @@ services:
       - letsencrypt:/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
   ui-bytes:
-    image: ghcr.io/applogico/ui-bytes:prod
+    image: ghcr.io/applogico/ui-bytes:latest
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.ui-bytes.rule=Host(`zenful.cloud`)'
       - 'traefik.http.routers.ui-bytes.entrypoints=websecure'
       - 'traefik.http.routers.ui-bytes.tls.certresolver=myresolver'
       - 'com.centurylinklabs.watchtower.enable=true'
-    secrets:
-      - db-password
-    environment:
-      - POSTGRES_HOST=db
-      - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=ui-bytes
-      - POSTGRES_PORT=5432
-      - POSTGRES_SSLMODE=disable
+
     deploy:
       mode: replicated
       replicas: 3
     restart: always
-    depends_on:
-      db:
-        condition: service_healthy
 volumes:
   letsencrypt:
