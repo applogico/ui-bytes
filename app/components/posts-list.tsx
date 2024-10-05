@@ -34,7 +34,7 @@ export default function PostLists({
           className="prose flex flex-col justify-start p-2 dark:prose-invert"
         >
           <h3 className="mb-1">{title}</h3>
-          <div className="flex items-center gap-x-4 text-xs">
+          <div className="flex flex-wrap items-center gap-x-4 text-xs">
             <time dateTime={publishedStr}>
               {publishedStr}
             </time>
@@ -44,7 +44,9 @@ export default function PostLists({
                   key={tag}
                   to={`/blog?tag=${tag}`}
                 >
-                  <Badge>{tag}</Badge>
+                  <Badge className="text-ellipsis whitespace-nowrap">
+                    {tag}
+                  </Badge>
                 </NavLink>
               ))}
           </div>
