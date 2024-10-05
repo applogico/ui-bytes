@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.12
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Prettier ignore workflows &nbsp;-&nbsp; by
+  **Jaime Liz**
+  [<samp>(af0c9)</samp>](https://github.com/applogico/ui-bytes/commit/af0c950)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.11...0.0.12)
+
 ## 0.0.11
 
 ### &nbsp;&nbsp;&nbsp;Features
