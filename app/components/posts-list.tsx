@@ -28,13 +28,14 @@ export default function PostLists({
         month: 'long',
         day: 'numeric',
       })
+
       return (
         <article
           key={slug}
           className="prose flex flex-col justify-start p-2 dark:prose-invert"
         >
           <h3 className="mb-1">{title}</h3>
-          <div className="flex flex-wrap items-center gap-x-4 text-xs">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
             <time dateTime={publishedStr}>
               {publishedStr}
             </time>
