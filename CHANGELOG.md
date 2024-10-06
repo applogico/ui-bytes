@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.0.24
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Add termly and g-tag conditionally &nbsp;-&nbsp;
+  by **Jaime Liz**
+  [<samp>(87d92)</samp>](https://github.com/applogico/ui-bytes/commit/87d92c0)
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Hydration error &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(c810a)</samp>](https://github.com/applogico/ui-bytes/commit/c810a46)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.23...0.0.24)
+
 ## 0.0.23
 
 ### &nbsp;&nbsp;&nbsp;Features
