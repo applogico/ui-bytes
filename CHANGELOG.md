@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.0.21
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Use action state script &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(8a1cc)</samp>](https://github.com/applogico/ui-bytes/commit/8a1cc97)
+- Embed published short &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(726ed)</samp>](https://github.com/applogico/ui-bytes/commit/726ed10)
+- Add page title to blog index &nbsp;-&nbsp; by
+  **Jaime Liz**
+  [<samp>(c3bca)</samp>](https://github.com/applogico/ui-bytes/commit/c3bca74)
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Mobile layout issues &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(346be)</samp>](https://github.com/applogico/ui-bytes/commit/346bec9)
+- Mobile view issues &nbsp;-&nbsp; by **Jaime
+  Liz**
+  [<samp>(0bc4a)</samp>](https://github.com/applogico/ui-bytes/commit/0bc4aea)
+- Tag casing &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(90c58)</samp>](https://github.com/applogico/ui-bytes/commit/90c58f3)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.20...0.0.21)
+
 ## 0.0.20
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
