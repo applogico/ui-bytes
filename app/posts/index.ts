@@ -1,7 +1,10 @@
 import type React from 'react'
-import Test, {
-  attributes as testAttr,
+import ReactComponentComposition, {
+  attributes as reactComponentComp,
 } from './react-component-composition.mdx'
+import UseActionState, {
+  attributes as useActionStateAttr,
+} from './use-action-state.mdx'
 
 interface Posts {
   published: number
@@ -14,11 +17,19 @@ interface Posts {
 
 export const posts: Array<Posts> = [
   {
-    published: testAttr.published,
-    slug: testAttr.slug,
-    tags: testAttr.tags,
-    title: testAttr.title,
-    preview: testAttr.preview,
-    content: Test,
+    published: reactComponentComp.published,
+    slug: reactComponentComp.slug,
+    tags: reactComponentComp.tags,
+    title: reactComponentComp.title,
+    preview: reactComponentComp.preview,
+    content: ReactComponentComposition,
+  },
+  {
+    published: useActionStateAttr.published,
+    slug: useActionStateAttr.slug,
+    tags: useActionStateAttr.tags,
+    title: useActionStateAttr.title,
+    preview: useActionStateAttr.preview,
+    content: UseActionState,
   },
 ]
