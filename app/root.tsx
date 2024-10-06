@@ -74,18 +74,20 @@ export function App() {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
-        <Meta />
-        <PreventFlashOnWrongTheme
-          ssrTheme={Boolean(data.theme)}
-        />
-        {/*Google tag (gtag.js)*/}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-D30L2DNDQX"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        {process.env.NODE_ENV !==
+          'development' && (
+          <>
+            <script
+              type="text/javascript"
+              src="https://app.termly.io/resource-blocker/0c5c8ffc-5e12-4687-81df-355f21de4bf9?autoBlock=on"
+            />
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=G-D30L2DNDQX"
+            ></script>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
              window.dataLayer = window.dataLayer ||[];
              function gtag() {
                window.dataLayer.push(arguments)
@@ -93,7 +95,14 @@ export function App() {
              gtag('js', new Date()); 
              gtag('config', 'G-D30L2DNDQX');
           `,
-          }}
+              }}
+            />
+          </>
+        )}
+        <Meta />
+        <PreventFlashOnWrongTheme
+          nonce="test"
+          ssrTheme={Boolean(data.theme)}
         />
 
         <Links />
@@ -106,7 +115,7 @@ export function App() {
               <Outlet />
             </div>
           </main>
-          <footer className="flex justify-center p-4 py-6 md:px-8">
+          <footer className="flex flex-col items-center justify-center p-4 py-6 md:px-8">
             <span className="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
               © 2024{' '}
               <a
@@ -117,6 +126,12 @@ export function App() {
               </a>
               . All Rights Reserved.
             </span>
+            <a
+              href="#"
+              className="termly-display-preferences"
+            >
+              Consent preferences
+            </a>
           </footer>
         </div>
         <ScrollRestoration />
@@ -131,6 +146,7 @@ export default function AppWithProviders() {
   const data = useLoaderData<typeof loader>()
   return (
     <ThemeProvider
+      disableTransitionOnThemeChange={true}
       specifiedTheme={data.theme}
       themeAction="/action/set-theme"
     >
