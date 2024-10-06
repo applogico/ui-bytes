@@ -65,6 +65,7 @@ export async function loader({
 export function App() {
   const data = useLoaderData<typeof loader>()
   const [theme] = useTheme()
+
   return (
     <html lang="en" className={clsx(theme)}>
       <head>
@@ -77,6 +78,24 @@ export function App() {
         <PreventFlashOnWrongTheme
           ssrTheme={Boolean(data.theme)}
         />
+        {/*Google tag (gtag.js)*/}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-D30L2DNDQX"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+             window.dataLayer = window.dataLayer ||[];
+             function gtag() {
+               window.dataLayer.push(arguments)
+             }
+             gtag('js', new Date()); 
+             gtag('config', 'G-D30L2DNDQX');
+          `,
+          }}
+        />
+
         <Links />
       </head>
       <body>
