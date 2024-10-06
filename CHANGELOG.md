@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.23
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Add g tag &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(53fba)</samp>](https://github.com/applogico/ui-bytes/commit/53fba1c)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.22...0.0.23)
+
 ## 0.0.22
 
 ### &nbsp;&nbsp;&nbsp;Features
