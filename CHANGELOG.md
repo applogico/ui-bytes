@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.22
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Embed use-action-state short &nbsp;-&nbsp; by
+  **Jaime Liz**
+  [<samp>(9fe65)</samp>](https://github.com/applogico/ui-bytes/commit/9fe65a8)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.21...0.0.22)
+
 ## 0.0.21
 
 ### &nbsp;&nbsp;&nbsp;Features
