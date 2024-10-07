@@ -108,14 +108,20 @@ export function App() {
           </main>
           <footer className="flex flex-col items-center justify-center p-4 py-6 md:px-8">
             <span className="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-              © 2024{' '}
+              Build by{' '}
               <a
                 href="https://applogi.co"
                 className="hover:underline"
               >
                 Applogico LLC
               </a>
-              . All Rights Reserved.
+              . Checkout the source code on{' '}
+              <a
+                href="https://github.com/applogico/ui-bytes"
+                className="hover:underline"
+              >
+                GitHub
+              </a>
             </span>
           </footer>
         </div>
