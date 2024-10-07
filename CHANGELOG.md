@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.25
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Remove termly crap keeps messing up ssr
+  &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(56a28)</samp>](https://github.com/applogico/ui-bytes/commit/56a288d)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.24...0.0.25)
+
 ## 0.0.24
 
 ### &nbsp;&nbsp;&nbsp;Features
