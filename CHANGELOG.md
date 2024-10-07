@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.26
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Update footer &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(4759b)</samp>](https://github.com/applogico/ui-bytes/commit/4759b85)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.25...0.0.26)
+
 ## 0.0.25
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
