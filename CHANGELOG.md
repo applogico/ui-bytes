@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.27
+
+### &nbsp;&nbsp;&nbsp;Bug Fixes
+
+- Typo &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(bf637)</samp>](https://github.com/applogico/ui-bytes/commit/bf637d5)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.26...0.0.27)
+
 ## 0.0.26
 
 ### &nbsp;&nbsp;&nbsp;Features
