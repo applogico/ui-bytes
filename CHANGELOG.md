@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.28
+
+### &nbsp;&nbsp;&nbsp;Features
+
+- Font file &nbsp;-&nbsp; by **Jaime Liz**
+  [<samp>(3efac)</samp>](https://github.com/applogico/ui-bytes/commit/3efac9a)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/applogico/ui-bytes/compare/0.0.27...0.0.28)
+
 ## 0.0.27
 
 ### &nbsp;&nbsp;&nbsp;Bug Fixes
